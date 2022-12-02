@@ -28,7 +28,7 @@ public class WorksWithDirectory {
     public static List<BufferedReader> getAllReader(Path file) throws IOException {
         ArrayList<BufferedReader> result = new ArrayList<>();
         for (Path x : getAllFilesLog(file)) {
-            result.add(new BufferedReader(new FileReader(x.getParent().toString() + "\\" + x.getFileName().toString())));
+            result.add(new BufferedReader(new FileReader(x.toString())));
         }
         return result;
     }
@@ -39,9 +39,8 @@ public class WorksWithDirectory {
         if (helpNumber == -1) {
             return false;
         } else {
-            return (nameOfFile.substring(helpNumber).equals(".log") || nameOfFile.substring(helpNumber).equals(".trace"));
+            return (nameOfFile.substring(helpNumber).toLowerCase().equals(".log") || nameOfFile.substring(helpNumber).toLowerCase().equals(".trace"));
             // тут мы возвращаем true если нашли нужное нам расширение файла
         }
     }
-
 }

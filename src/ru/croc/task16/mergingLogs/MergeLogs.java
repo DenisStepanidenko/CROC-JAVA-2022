@@ -49,7 +49,9 @@ public class MergeLogs {
             System.out.println(currentMinimums.get(minIndex));
             String nextLine = allReader.get(minIndex).readLine(); // читаем следующую строку в файле где нашли минимум
             if (nextLine == null) {
+                allReader.get(minIndex).close();
                 allReader.remove(allReader.get(minIndex));
+                //allReader.get(minIndex).close();
                 currentMinimums.remove(currentMinimums.get(minIndex));
             } else {
                 currentMinimums.set(minIndex, nextLine);
