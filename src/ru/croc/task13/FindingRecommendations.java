@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 public class FindingRecommendations {
     private DataSet data;
+
     public FindingRecommendations(String pathToTheFilms, String pathToTheViews) throws IOException {
         this.data = new DataSet(pathToTheFilms, pathToTheViews);
     }

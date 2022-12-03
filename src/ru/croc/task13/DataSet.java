@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class DataSet{
-    private Map<Integer , String> films;
+public class DataSet {
+    private Map<Integer, String> films;
     private Map<Integer, ArrayList<Integer>> views;
 
     public DataSet(String pathToTheFilm, String pathToTheViews) throws IOException {
