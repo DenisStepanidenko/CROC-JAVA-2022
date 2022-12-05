@@ -1,4 +1,4 @@
-package ru.croc.task13.some_package;
+package ru.croc.task13.recomendations;
 
 import java.io.IOException;
 import java.util.ArrayList;

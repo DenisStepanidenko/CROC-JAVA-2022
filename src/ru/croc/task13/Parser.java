@@ -1,6 +1,4 @@
-package ru.croc.task13.some_package;
-
-import org.testng.internal.junit.ArrayAsserts;
+package ru.croc.task13.recomendations;
 
 import java.io.IOException;
 import java.nio.file.Files;
