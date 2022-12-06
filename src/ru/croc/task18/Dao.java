@@ -67,7 +67,7 @@ public class Dao {
         return product;
     }
 
-    // данный метод удаляет всю инфу о заказаз с конкретным продуктом и сам продукт из базы
+    // данный метод удаляет всю инфу о заказах с конкретным продуктом и сам продукт из базы
     void deleteProduct(String productCode) throws SQLException, ThereIsNoSuchProductInDatabase {
         // позаботимся о том, чтобы данный товар вообще был в базе
         if (findProduct(productCode) == null) {
