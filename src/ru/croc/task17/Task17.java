@@ -13,10 +13,14 @@ public class Task17 {
         String connectionUrl = "jdbc:h2:tcp://localhost/~/test";
         String user = "sa";
         String password = "123";
-        Connection connection = DriverManager.getConnection(connectionUrl , user , password);
-        test.createTable(connection);
-        test.importsProducts(connection);
-        test.importOrders(connection);
+        try(Connection connection = DriverManager.getConnection(connectionUrl , user , password)) {
+            test.createTable(connection);
+            test.importsProducts(connection);
+            test.importOrders(connection);
+            connection.close();
+        }catch (SQLException ex){
+            throw ex;
+        }
         // тесты прошли успешно , всё загрузилось :)
 
     }
